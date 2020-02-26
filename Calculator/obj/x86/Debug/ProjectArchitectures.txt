@@ -1,0 +1,1 @@
+C:\Users\Administrator\Desktop\Calculator\Calculator\Calculator.csproj;x86
