@@ -86,34 +86,37 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBox Text="TextBox" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" TextWrapping="Wrap"/>
+        <TextBlock Text="TextBox" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" TextWrapping="Wrap"/>
 
-        <Button Content="7" Grid.Row="1" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="7"/>
-        <Button Content="8" Grid.Row="1" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="8"/>
-        <Button Content="9" Grid.Row="1" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="9"/>
-        <Button Content="4" Grid.Row="2" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="4"/>
-        <Button Content="5" Grid.Row="2" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="5"/>
-        <Button Content="6" Grid.Row="2" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="6"/>
-        <Button Content="1" Grid.Row="3" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="1"/>
-        <Button Content="2" Grid.Row="3" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="2"/>
-        <Button Content="3" Grid.Row="3" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="3"/>
-        <Button Content="0" Grid.Row="4" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="0"/>
-        <Button Content="." Grid.Row="4" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="."/>
-        <Button Content="+/-" Grid.Row="4" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding Number}" CommandParameter="3"/>
+        <Button Content="7" Grid.Row="1" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="7"/>
+        <Button Content="8" Grid.Row="1" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="8"/>
+        <Button Content="9" Grid.Row="1" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="9"/>
+        <Button Content="4" Grid.Row="2" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="4"/>
+        <Button Content="5" Grid.Row="2" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="5"/>
+        <Button Content="6" Grid.Row="2" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="6"/>
+        <Button Content="1" Grid.Row="3" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="1"/>
+        <Button Content="2" Grid.Row="3" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="2"/>
+        <Button Content="3" Grid.Row="3" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="3"/>
+        <Button Content="0" Grid.Row="4" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="0"/>
+        <Button Content="." Grid.Row="4" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding Point}"/>
+        <Button Content="+/-" Grid.Row="4" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding Sign}"/>
         
-        <Button Content="+" Grid.Row="1" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding Operation}" CommandParameter="+"/>
-        <Button Content="-" Grid.Row="2" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding Operation}" CommandParameter="-"/>
-        <Button Content="*" Grid.Row="3" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding Operation}" CommandParameter="*"/>
-        <Button Content="/" Grid.Row="4" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding Operation}" CommandParameter="/"/>
+        <Button Content="+" Grid.Row="1" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="+"/>
+        <Button Content="-" Grid.Row="2" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="-"/>
+        <Button Content="*" Grid.Row="3" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="*"/>
+        <Button Content="/" Grid.Row="4" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="/"/>
         
-        <Button Content="fce" Grid.Row="1" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="3"/>
-        <Button Content="fce" Grid.Row="2" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="3"/>
-        <Button Content="fce" Grid.Row="3" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="3"/>
-        <Button Content="fce" Grid.Row="4" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="3"/>
+        <Button Content="fce" Grid.Row="1" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        <Button Content="fce" Grid.Row="2" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        <Button Content="fce" Grid.Row="3" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        <Button Content="fce" Grid.Row="4" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
         
-        <Button Content="=" Grid.Row="0" Grid.Column="5" Style="{StaticResource EqualButton}" Command="{Binding Number}" CommandParameter="3"/>
+        <Button Content="=" Grid.Row="0" Grid.Column="5" Style="{StaticResource EqualButton}" Command="{Binding Result}"/>
         
-        <Button Content="Reset" Grid.ColumnSpan="5" Grid.Row="5" Grid.Column="0" Style="{StaticResource ResetButton}" Command="{Binding Number}" CommandParameter="3"/>
+        <Button Content="Reset" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="3" Style="{StaticResource ResetButton}" Command="{Binding Reset}"/>
+
+        <TextBox Text="{Binding TextMessage}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap"/>
+
 
     </Grid>
 </Page>

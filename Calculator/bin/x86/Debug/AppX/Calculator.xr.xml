@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Number" />
+    <RootPropertyPathName Name="TextMessage" />
+    <RootPropertyPathName Name="Reset" />
+    <RootPropertyPathName Name="Result" />
     <RootPropertyPathName Name="FunctionButton" />
-    <RootPropertyPathName Name="Operation" />
+    <RootPropertyPathName Name="OperationButton" />
+    <RootPropertyPathName Name="Sign" />
+    <RootPropertyPathName Name="Point" />
+    <RootPropertyPathName Name="NumberButton" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -60,6 +65,10 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
