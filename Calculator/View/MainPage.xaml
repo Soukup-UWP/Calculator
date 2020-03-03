@@ -86,8 +86,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="TextBox" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" TextWrapping="Wrap"/>
-
         <Button Content="7" Grid.Row="1" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="7"/>
         <Button Content="8" Grid.Row="1" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="8"/>
         <Button Content="9" Grid.Row="1" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="9"/>
@@ -115,7 +113,7 @@
         
         <Button Content="Reset" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="3" Style="{StaticResource ResetButton}" Command="{Binding Reset}"/>
 
-        <TextBox Text="{Binding TextMessage}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap"/>
+        <TextBlock Text="{Binding TextMessage}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap" FontSize="40"/>
 
 
     </Grid>

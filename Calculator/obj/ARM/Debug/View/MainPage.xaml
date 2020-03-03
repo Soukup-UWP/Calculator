@@ -1,0 +1,123 @@
+﻿<Page
+    x:Class="Calculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="using:Calculator.ViewModel"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <viewmodel:MainViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
+        <Style x:Key="NumberButton" TargetType="Button" BasedOn="{StaticResource Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Gray" Offset="0.0"/>
+                        <GradientStop Color="DarkGray" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="OperationButton" TargetType="Button" BasedOn="{StaticResource Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Blue" Offset="0.0"/>
+                        <GradientStop Color="DarkBlue" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FunctionButton" TargetType="Button" BasedOn="{StaticResource Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Yellow" Offset="0.0"/>
+                        <GradientStop Color="DarkGoldenrod" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="EqualButton" TargetType="Button" BasedOn="{StaticResource Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Green" Offset="0.0"/>
+                        <GradientStop Color="DarkGreen" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ResetButton" TargetType="Button" BasedOn="{StaticResource Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Red" Offset="0.0"/>
+                        <GradientStop Color="DarkRed" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="TextBox" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" TextWrapping="Wrap"/>
+
+        <Button Content="7" Grid.Row="1" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="7"/>
+        <Button Content="8" Grid.Row="1" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="8"/>
+        <Button Content="9" Grid.Row="1" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="9"/>
+        <Button Content="4" Grid.Row="2" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="4"/>
+        <Button Content="5" Grid.Row="2" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="5"/>
+        <Button Content="6" Grid.Row="2" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="6"/>
+        <Button Content="1" Grid.Row="3" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="1"/>
+        <Button Content="2" Grid.Row="3" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="2"/>
+        <Button Content="3" Grid.Row="3" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="3"/>
+        <Button Content="0" Grid.Row="4" Grid.Column="0" Style="{StaticResource NumberButton}" Command="{Binding NumberButton}" CommandParameter="0"/>
+        <Button Content="." Grid.Row="4" Grid.Column="1" Style="{StaticResource NumberButton}" Command="{Binding Point}"/>
+        <Button Content="+/-" Grid.Row="4" Grid.Column="2" Style="{StaticResource NumberButton}" Command="{Binding Sign}"/>
+        
+        <Button Content="+" Grid.Row="1" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="+"/>
+        <Button Content="-" Grid.Row="2" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="-"/>
+        <Button Content="*" Grid.Row="3" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="*"/>
+        <Button Content="/" Grid.Row="4" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="/"/>
+        
+        <Button Content="fce" Grid.Row="1" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        <Button Content="fce" Grid.Row="2" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        <Button Content="fce" Grid.Row="3" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        <Button Content="fce" Grid.Row="4" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        
+        <Button Content="=" Grid.Row="0" Grid.Column="5" Style="{StaticResource EqualButton}" Command="{Binding Result}"/>
+        
+        <Button Content="Reset" Grid.ColumnSpan="2" Grid.Row="5" Grid.Column="3" Style="{StaticResource ResetButton}" Command="{Binding Reset}"/>
+
+        <TextBox Text="{Binding TextMessage}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap"/>
+
+
+    </Grid>
+</Page>
+
