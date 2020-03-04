@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-7U97J89</Machine>
-    <WindowsUser>josep</WindowsUser>
+    <Machine>PC2019-07</Machine>
+    <WindowsUser>Administrator</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>c2363a12-fb3e-4eaa-a8d4-70106aff150b</PackageIdentityName>
     <PackageIdentityPublisher>CN=Administrator</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Administrator\Desktop\Calculator\Calculator\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>8DBF811A0E2352418AC483FEBFE4F695D01B66024BC98F2093A1A31FB6584FF3</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>683959DF77CEEA7A2CD4D68AF5DD9E46DF61A7F97596718E5713A5D17613CF8A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c2363a12-fb3e-4eaa-a8d4-70106aff150b_1.0.0.0_x64__75cr2b68sm664</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c2363a12-fb3e-4eaa-a8d4-70106aff150b_75cr2b68sm664!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c2363a12-fb3e-4eaa-a8d4-70106aff150b</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-03T21:10:09.926</Modified>
+      <Modified>2020-03-04T07:13:14.680</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\Calculator.exe">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
-      <Modified>2020-03-03T21:10:09.395</Modified>
+      <Modified>2020-03-04T07:13:14.277</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,67 +46,67 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T17:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-03T20:34:11.200</Modified>
+      <Modified>2020-03-04T07:02:31.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\Calculator.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
-      <Modified>2020-03-03T21:00:03.129</Modified>
+      <Modified>2020-03-04T07:02:31.999</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-03-03T21:08:59.741</Modified>
+      <Modified>2020-03-04T07:13:14.135</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\View\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
-      <Modified>2020-03-03T21:08:59.726</Modified>
+      <Modified>2020-03-04T07:13:14.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T16:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-03-03T20:36:18.733</Modified>
+      <Modified>2020-03-04T07:04:28.756</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\josep\OneDrive\Desktop\Calculator\Calculator\bin\x64\Debug\Core\Calculator.exe">
+    <AppxPackagedFile Include="C:\Users\Administrator\Desktop\Calculator\Calculator\bin\x64\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
-      <Modified>2020-03-03T21:10:09.910</Modified>
+      <Modified>2020-03-04T07:13:14.675</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

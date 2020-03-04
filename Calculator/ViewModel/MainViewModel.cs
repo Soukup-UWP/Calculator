@@ -10,14 +10,14 @@ namespace Calculator.ViewModel
 {
     class MainViewModel : INotifyPropertyChanged
     {
-        private string _input;
-        private string _storedValue;
+        //private string _input;
+        //private string _storedValue;
         private string _message;
         public ParametrizedRelayCommand NumberButton{ get; set; } //DONE
         public ParametrizedRelayCommand OperationButton { get; set; }
         public ParametrizedRelayCommand FunctionButton { get; set; }
 
-        public RelayCommand Reset { get; set; }
+        public RelayCommand Reset { get; set; } //DONE
         public RelayCommand Point { get; set; } //DONE
         public RelayCommand Sign { get; set; } //DONE
         public RelayCommand Result { get; set; }
@@ -57,7 +57,7 @@ namespace Calculator.ViewModel
             Reset = new RelayCommand(
                 () =>
                 {
-                    TextMessage = "0";
+                    TextMessage = "";
                 },
                 () => { return true; }
             );
