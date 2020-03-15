@@ -60,6 +60,7 @@ namespace Calculator.ViewModel
                 () =>
                 {
                     TextMessage = "";
+                    _storedValue = "";
                 },
                 () => { return true; }
             );
@@ -69,14 +70,17 @@ namespace Calculator.ViewModel
                     if (_operation == 1)
                     {
                         TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) + Convert.ToDouble(TextMessage));
+                        _operation = 0;
                     }
                     if (_operation == 2)
                     {
                         TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) - Convert.ToDouble(TextMessage));
+                        _operation = 0;
                     }
                     if (_operation == 3)
                     {
                         TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) * Convert.ToDouble(TextMessage));
+                        _operation = 0;
                     }
                     if (_operation == 4)
                     {
@@ -87,24 +91,29 @@ namespace Calculator.ViewModel
                         else
                         {
                             TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) / Convert.ToDouble(TextMessage));
+                            _operation = 0;
                         }
                         
                     }
                     if(_function == 1)
                     {
                         TextMessage = Convert.ToString(Math.Pow(Convert.ToDouble(_storedValue), Convert.ToDouble(TextMessage)));
+                        _function = 0;
                     }
                     if (_function == 2)
                     {
                         TextMessage = Convert.ToString(Math.Sqrt(Convert.ToDouble(_storedValue)));
+                        _function = 0;
                     }
                     if (_function == 3)
                     {
                         TextMessage = Convert.ToString(Math.Log(Convert.ToDouble(TextMessage),Convert.ToDouble(_storedValue)));
+                        _function = 0;
                     }
                     if (_function == 4)
                     {
                         TextMessage = Convert.ToString(Math.Sin(Convert.ToDouble(_storedValue)));
+                        _function = 0;
                     }
 
                 },
