@@ -13,6 +13,7 @@ namespace Calculator.ViewModel
         private string _input;
         private string _storedValue;
         private string _message;
+        private int _function;
         public ParametrizedRelayCommand NumberButton{ get; set; } //DONE
         public ParametrizedRelayCommand OperationButton { get; set; }
         public ParametrizedRelayCommand FunctionButton { get; set; }
@@ -26,7 +27,6 @@ namespace Calculator.ViewModel
 
         public MainViewModel()
         {
-            TextMessage = "";
             NumberButton = new ParametrizedRelayCommand(
                 (param) =>
                 {
@@ -39,6 +39,7 @@ namespace Calculator.ViewModel
                 {
                     if(TextMessage.Length > 0)
                     {
+                        
                         TextMessage = Convert.ToString((Convert.ToDouble(TextMessage) * (-1)));
                     }
                 },
@@ -57,7 +58,53 @@ namespace Calculator.ViewModel
             Reset = new RelayCommand(
                 () =>
                 {
-                    TextMessage = "0";
+                    TextMessage = "";
+                },
+                () => { return true; }
+            );
+            Result = new RelayCommand(
+                () =>
+                {
+                    if (_function == 1)
+                    {
+                        TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) + Convert.ToDouble(TextMessage));
+                    }
+                    if (_function == 2)
+                    {
+                        TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) - Convert.ToDouble(TextMessage));
+                    }
+                    if (_function == 3)
+                    {
+                        TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) * Convert.ToDouble(TextMessage));
+                    }
+                    if (_function == 4)
+                    {
+                        TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) / Convert.ToDouble(TextMessage));
+                    }
+                },
+                () => { return true; }
+            );
+            OperationButton = new ParametrizedRelayCommand(
+                (param) =>
+                {
+                    _storedValue = TextMessage;
+                    TextMessage = "";
+                   if(Convert.ToString(param) == "+")
+                    {
+                        _function = 1;
+                    }
+                   if(Convert.ToString(param) == "-")
+                    {
+                        _function = 2;
+                    }
+                   if(Convert.ToString(param) == "*")
+                    {
+                        _function = 3;
+                    }
+                   else if(Convert.ToString(param) == "/")
+                    {
+                        _function = 4;
+                    }
                 },
                 () => { return true; }
             );
