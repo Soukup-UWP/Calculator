@@ -10,15 +10,16 @@ namespace Calculator.ViewModel
 {
     class MainViewModel : INotifyPropertyChanged
     {
-        private string _input;
+        //private string _input;
         private string _storedValue;
         private string _message;
+        private int _operation;
         private int _function;
         public ParametrizedRelayCommand NumberButton{ get; set; } //DONE
         public ParametrizedRelayCommand OperationButton { get; set; }
         public ParametrizedRelayCommand FunctionButton { get; set; }
 
-        public RelayCommand Reset { get; set; }
+        public RelayCommand Reset { get; set; } //DONE
         public RelayCommand Point { get; set; } //DONE
         public RelayCommand Sign { get; set; } //DONE
         public RelayCommand Result { get; set; }
@@ -65,22 +66,47 @@ namespace Calculator.ViewModel
             Result = new RelayCommand(
                 () =>
                 {
-                    if (_function == 1)
+                    if (_operation == 1)
                     {
                         TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) + Convert.ToDouble(TextMessage));
                     }
-                    if (_function == 2)
+                    if (_operation == 2)
                     {
                         TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) - Convert.ToDouble(TextMessage));
                     }
-                    if (_function == 3)
+                    if (_operation == 3)
                     {
                         TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) * Convert.ToDouble(TextMessage));
                     }
+                    if (_operation == 4)
+                    {
+                        if(TextMessage == "0")
+                        {
+                            TextMessage = "Nonono Zero is not allowed!!!";
+                        }
+                        else
+                        {
+                            TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) / Convert.ToDouble(TextMessage));
+                        }
+                        
+                    }
+                    if(_function == 1)
+                    {
+                        TextMessage = Convert.ToString(Math.Pow(Convert.ToDouble(_storedValue), Convert.ToDouble(TextMessage)));
+                    }
+                    if (_function == 2)
+                    {
+                        TextMessage = Convert.ToString(Math.Sqrt(Convert.ToDouble(_storedValue)));
+                    }
+                    if (_function == 3)
+                    {
+                        TextMessage = Convert.ToString(Math.Log(Convert.ToDouble(TextMessage),Convert.ToDouble(_storedValue)));
+                    }
                     if (_function == 4)
                     {
-                        TextMessage = Convert.ToString(Convert.ToDouble(_storedValue) / Convert.ToDouble(TextMessage));
+                        TextMessage = Convert.ToString(Math.Sin(Convert.ToDouble(_storedValue)));
                     }
+
                 },
                 () => { return true; }
             );
@@ -91,17 +117,41 @@ namespace Calculator.ViewModel
                     TextMessage = "";
                    if(Convert.ToString(param) == "+")
                     {
-                        _function = 1;
+                        _operation = 1;
                     }
                    if(Convert.ToString(param) == "-")
                     {
-                        _function = 2;
+                        _operation = 2;
                     }
                    if(Convert.ToString(param) == "*")
                     {
-                        _function = 3;
+                        _operation = 3;
                     }
                    else if(Convert.ToString(param) == "/")
+                    {
+                        _operation = 4;
+                    }
+                },
+                () => { return true; }
+            );
+            FunctionButton = new ParametrizedRelayCommand(
+                (param) =>
+                {
+                    _storedValue = TextMessage;
+                    TextMessage = "";
+                    if (Convert.ToString(param) == "X**Y")
+                    {
+                        _function = 1;
+                    }
+                    if (Convert.ToString(param) == "Sqrt")
+                    {
+                        _function = 2;
+                    }
+                    if (Convert.ToString(param) == "Log")
+                    {
+                        _function = 3;
+                    }
+                    if (Convert.ToString(param) == "Sin")
                     {
                         _function = 4;
                     }

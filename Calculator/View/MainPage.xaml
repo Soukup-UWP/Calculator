@@ -104,10 +104,10 @@
         <Button Content="*" Grid.Row="3" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="*"/>
         <Button Content="/" Grid.Row="4" Grid.Column="3" Style="{StaticResource OperationButton}" Command="{Binding OperationButton}" CommandParameter="/"/>
         
-        <Button Content="fce" Grid.Row="1" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
-        <Button Content="fce" Grid.Row="2" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
-        <Button Content="fce" Grid.Row="3" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
-        <Button Content="fce" Grid.Row="4" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X"/>
+        <Button Content="X**Y" Grid.Row="1" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="X**Y"/>
+        <Button Content="Sqrt" Grid.Row="2" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="Sqrt"/>
+        <Button Content="Log" Grid.Row="3" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="Log"/>
+        <Button Content="Sin" Grid.Row="4" Grid.Column="4" Style="{StaticResource FunctionButton}" Command="{Binding FunctionButton}" CommandParameter="Sin"/>
         
         <Button Content="=" Grid.Row="0" Grid.Column="5" Style="{StaticResource EqualButton}" Command="{Binding Result}"/>
         
